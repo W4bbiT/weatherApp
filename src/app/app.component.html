@@ -7,7 +7,7 @@
 <div class="container" *ngIf="weatherData">
   <div class="upperData">
     <img src="../assets/hot.png" loading="lazy" *ngIf="weatherData.current.temp_c > 28">
-    <img src="../assets/pleasant.png" loading="lazy" *ngIf="weatherData.current.temp_c < 28 && weatherData.current.temp_c > 20">
+    <img src="../assets/pleasant.png" loading="lazy" *ngIf="weatherData.current.temp_c <= 28 && weatherData.current.temp_c >= 20">
     <img src="../assets/cold.png" loading="lazy" *ngIf="weatherData.current.temp_c < 20">
     <div class="weatherData">
 
