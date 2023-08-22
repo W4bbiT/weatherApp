@@ -1,1 +1,190 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --red-2: #000000ea;
+    --yellow-1: #fffa6c;
+    --white: #ffffff;
+    --grey: #8f8f8f;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --shadow-light: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background: url('./assets/bg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    backdrop-filter: blur(50px);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 80vh;
+    background-color: var(--red-2);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px var(--shadow-dark);
+}
+
+.upperData {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.lowerData {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.upperData img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.weatherData {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherData span {
+    color: var(--white);
+}
+
+.location {
+    color: var(--white);
+    text-align: center;
+}
+
+.location h3 {
+    display: block;
+    font-size: 1.8em;
+}
+
+.location span {
+    display: block;
+    font-size: 0.8em;
+}
+
+.temperature {
+    color: var(--white);
+    font-size: 4em;
+    text-align: center;
+    font-weight: 900;
+}
+
+.condition{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.condition img,
+.condition span {
+    position: relative;
+}
+
+.condition img{
+    width: 2em
+}
+
+.moreInfoLabel {
+    color: --white;
+}
+
+.moreInfoContainer {
+    flex: 1;
+    background-color: var(--shadow-light);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.infoBlock {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.infoBlockLabel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoBlockLabel img {
+    width: 3em;
+}
+
+.infoBlockLabel span {
+    color: var(--white);
+    font-size: 0.8em;
+}
+
+.infoBlockValue {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--white);
+}
+
+.search {
+    margin-bottom: 1em;
+    text-align: center;
+
+}
+
+.search input {
+    background-color: var(--shadow-light);
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--white);
+    font-size: 0.8em;
+    text-align: center;
+}
