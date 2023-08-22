@@ -6,9 +6,9 @@
 
 <div class="container" *ngIf="weatherData">
   <div class="upperData">
-    <img src="../assets/hot.png" loading="lazy" *ngIf="weatherData.current.temp_c > 28">
-    <img src="../assets/pleasant.png" loading="lazy" *ngIf="weatherData.current.temp_c <= 28 && weatherData.current.temp_c >= 20">
-    <img src="../assets/cold.png" loading="lazy" *ngIf="weatherData.current.temp_c < 20">
+    <img src="assets/hot.png" loading="lazy" *ngIf="weatherData.current.temp_c > 28">
+    <img src="assets/pleasant.png" loading="lazy" *ngIf="weatherData.current.temp_c <= 28 && weatherData.current.temp_c >= 20">
+    <img src="assets/cold.png" loading="lazy" *ngIf="weatherData.current.temp_c < 20">
     <div class="weatherData">
 
       <div class="location">
@@ -29,8 +29,8 @@
     <div class="moreInfoContainer">
       <div class="infoBlock">
         <div class="infoBlockLabel">
-          <img src="../assets/low.png" *ngIf="weatherData.current.feelslike_c <= 25">
-          <img src="../assets/high.png" *ngIf="weatherData.current.feelslike_c > 25">
+          <img src="../assets/low.png" loading="lazy" *ngIf="weatherData.current.feelslike_c <= 25">
+          <img src="../assets/high.png" loading="lazy" *ngIf="weatherData.current.feelslike_c > 25">
           <span>feels like</span>
         </div>
         <div class="infoBlockValue">
@@ -39,7 +39,7 @@
       </div>
       <div class="infoBlock">
         <div class="infoBlockLabel">
-          <img src="../assets/humid.png">
+          <img src="../assets/humid.png" loading="lazy">
           <span>humidity</span>
         </div>
         <div class="infoBlockValue">
@@ -48,7 +48,7 @@
       </div>
       <div class="infoBlock">
         <div class="infoBlockLabel">
-          <img src="../assets/wind.png">
+          <img src="../assets/wind.png" loading="lazy">
           <span>wind</span>
         </div>
         <div class="infoBlockValue">
@@ -57,7 +57,7 @@
       </div>
       <div class="infoBlock">
         <div class="infoBlockLabel">
-          <img src="../assets/cloud.png">
+          <img src="../assets/cloud.png" loading="lazy">
           <span>cloud</span>
         </div>
         <div class="infoBlockValue">
